@@ -1,0 +1,147 @@
+.clearRow:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+body {
+  background: url("/images/background.png");
+  margin: 0px;
+  font-family: sans-serif; }
+
+.largeFont {
+  font-size: 16px; }
+
+.mediumFont {
+  font-size: 14px; }
+
+.smallFont {
+  font-size: 12px; }
+
+.sliderDiv {
+  border: 1px solid red;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%; }
+  .sliderDiv img {
+    width: 100%; }
+
+.mainDiv {
+  position: relative;
+  padding: 0px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 0px 3px black; }
+  .mainDiv h1, .mainDiv h4 {
+    margin: 7px;
+    color: white; }
+
+.mainDiv > div:first-of-type {
+  background: url("/images/stadiumBack.jpg");
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  filter: opacity(70%) blur(1px); }
+
+.mainDiv > div:nth-of-type(2) {
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -2; }
+
+.detailsHeadOuter {
+  background-color: #5f5f5f;
+  color: white;
+  text-align: center; }
+
+.matchDetailsOuter {
+  background-color: white;
+  line-height: 20px;
+  text-align: center; }
+
+.matchDetails {
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px; }
+  .matchDetails:after {
+    content: '';
+    clear: both;
+    display: block; }
+
+.matchDetails > div:first-of-type, .detailsHead > div:first-of-type {
+  width: 30%;
+  float: left; }
+  .matchDetails > div:first-of-type div, .detailsHead > div:first-of-type div {
+    padding: 5px; }
+
+.matchDetails > div:nth-of-type(2), .detailsHead > div:nth-of-type(2) {
+  width: 70%;
+  float: left; }
+  .matchDetails > div:nth-of-type(2) div, .detailsHead > div:nth-of-type(2) div {
+    padding: 5px; }
+
+.sliderDivLogo {
+  overflow: hidden;
+  background-color: white;
+  padding: 10px; }
+
+.favourites {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  padding: 5px; }
+
+.favourites div:first-of-type {
+  text-align: center; }
+
+.lineHeightImage img {
+  margin-top: 20px; }
+
+.venuesForIpl {
+  background-color: white;
+  padding: 0px; }
+
+.groundsHead {
+  color: white;
+  background-color: #5f5f5f; }
+
+.grounds {
+  clear: both;
+  padding: 1em;
+  border: 1px solid gray; }
+
+.grounds > div:first-of-type {
+  padding: 5px; }
+
+.links {
+  width: 100%;
+  padding: 2px; }
+  .links:after {
+    content: '';
+    clear: both;
+    display: block; }
+  .links div {
+    float: right;
+    margin-right: 5px; }
+  .links span {
+    display: inline-block;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    box-shadow: 0px 0px 2px black; }
+  .links span {
+    cursor: pointer; }
+
+.links > div:first-of-type span {
+  background-color: #70a1c3; }
+
+.links > div:nth-of-type(2) span {
+  background-color: rgba(197, 139, 67, 0.81); }
+
+.links > div:first-of-type span:hover {
+  background-color: #4f7fa0; }
+
+.links > div:nth-of-type(2) span:hover {
+  background-color: rgba(177, 122, 55, 0.99); }

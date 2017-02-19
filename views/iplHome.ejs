@@ -1,0 +1,150 @@
+<!Doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript" />
+  <meta name="description" content="All About IPL 2017" />
+  <meta name="author" content="Imran Shaik" />
+  <!-- <meta http-equiv="refresh" content="30" /> -->
+  <link rel="stylesheet" href="/css/common_css.css" type="text/css" />
+  <link rel="stylesheet" href="/css/iplHome.css" type="text/css" />
+  <!-- JQUERY CDN -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!-- SLICK -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script type="text/javascript" src="/controllers/iplHome.js"></script>
+</head>
+<body>
+  <div class="mainDiv col-12">
+    <div class="col-12 backgroundImageDiv"></div>
+    <div class="col-12 backgroundImageDiv"></div>
+    <div class="sliderDiv">
+      <div><img src="/images/slide1.jpg"></div>
+      <div><img src="/images/slide3.png"></div>
+      <div><img src="/images/slide2.jpg"></div>
+    </div>
+    <h1><i>Indian Premier League</i></h1>
+    <h4>2017</h4>
+  </div>
+
+
+    <div class="col-12">
+      <div class="sliderDivLogo col-12">
+        <h3>Select your Favourite Team</h3>
+         <div class="col-3">
+          <div class="favourites lineHeightImage">
+            <div><img src="/images/rps.jpg" width="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites lineHeightImage">
+            <div><img src="/images/dd.png" width="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites">
+            <div><img src="/images/srh.png" width="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites">
+            <div><img src="/images/mi.png" width="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites">
+            <div><img src="/images/rcb.png" height="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites">
+            <div><img src="/images/gl.jpg" height="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites">
+            <div><img src="/images/kkr.png" height="100px"></div>
+            <div></div>
+          </div>
+         </div>
+         <div class="col-3">
+          <div class="favourites">
+            <div><img src="/images/kp.png" height="100px"></div>
+            <div></div>
+          </div>
+         </div>
+        </div>
+    </div>
+
+
+  <div class="col-8">
+    <div>
+      <div class="col-12 detailsHeadOuter">
+        <div class="detailsHead">
+          <div>
+            <div class="smallFont"><b>Match No</b></div>
+            <div class="mediumFont"><b>Match Date</b></div>
+          </div>
+          <div>
+            <div class="mediumFont"><b>Match</b></div>
+            <div class="mediumFont"><b>Venue</b></div>
+          </div>
+        </div>
+      </div>
+      <% if(locals.data){
+         var len = data.length;
+          for(var i = 0; i < len; i++){
+        %>
+        <div class="col-12 matchDetailsOuter">
+          <div class="matchDetails">
+            <div>
+              <div class="smallFont">Match  <%= data[i].match_no %></div>
+              <div class="mediumFont"><%= data[i].match_date.getFullYear() + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][data[i].match_date.getMonth()] + " " + data[i].match_date.getDate();  %></div>
+            </div>
+            <div>
+              <div class="mediumFont"><b><%= data[i].teama %> vs <%= data[i].teamb %></b></div>
+              <div class="mediumFont"><%= data[i].venue %></div>
+            </div>
+          </div>
+        </div>
+
+        <% }
+      } %>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="venuesForIpl col-12">
+      <div class="col-12 center-text groundsHead">
+        <h4>Venues for IPL 2017 </h4>
+      </div>
+      <% if(locals.dataGrounds){
+          var lenG = dataGrounds.length;
+          for(var i = 0; i < lenG; i++){ %>
+            <div class="grounds">
+              <div><%= dataGrounds[i].ground_name %></div>
+              <div class="links">
+                <div class="center-text"><a href="<%= dataGrounds[i].wiki_link %>" target="_blank"><span>About</span></a></div>
+                <div class="center-text"><a href="<%= dataGrounds[i].map_link %>" target="_blank"><span>Map</span></a></div>
+              </div>
+            </div>
+      <%  }
+    } %>
+    </div>
+
+  </div>
+
+  </script>
+</body>
+</html>
+<!--
+ -->
