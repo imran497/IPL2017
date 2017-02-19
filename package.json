@@ -1,0 +1,23 @@
+{
+  "name": "node_progs",
+  "version": "1.0.0",
+  "description": "Sample project",
+  "main": "sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "imran",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-mysql-session": "^1.2.0",
+    "express-session": "^1.14.2",
+    "multer": "^1.2.0",
+    "mysql": "^2.12.0"
+  }
+}
