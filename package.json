@@ -2,9 +2,10 @@
   "name": "node_progs",
   "version": "1.0.0",
   "description": "Sample project",
-  "main": "sample.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [
     "learning"
