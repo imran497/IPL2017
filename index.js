@@ -77,7 +77,7 @@ app.post("/", function(req, res){
     var likesRows = JSON.stringify(likesRows);
     res.send(likesRows)*/
 	res.send('{"srh":"10"}');
-  });
+  /* }); */
 });
 
 /*app.post("/likeTeam", urlencodedParser, function(req, res){
