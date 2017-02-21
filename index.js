@@ -8,16 +8,17 @@ var session = require("express-session");
 var mysqlStore = require("express-mysql-session")(session);
 
 var mysql = require("mysql");
+/*
 var connection = mysql.createConnection({
     host     : 'localhost',
     port  : 3306,
     user     : 'root',
     password : 'Immu497@',
     database : "ipl2017"
-});
+}); */
 
 /* CONNECT TO DATABASE */
-connection.connect(function(err) {
+/*connection.connect(function(err) {
 	if (err) {
 		console.error('error connecting: ' + err.stack);
 		return;
@@ -57,7 +58,7 @@ sass.render({file: __dirname+"/assets/css/iplHome.scss",
 
 
 app.get("/", function(req, res){
-  connection.query("select match_no, (select team_name from teams where team_name_key = teama) as teama,  (select team_name from teams where team_name_key = teamb) as teamb, match_date, venue  from matches", function(errMatches, rowsMatches){
+  /*connection.query("select match_no, (select team_name from teams where team_name_key = teama) as teama,  (select team_name from teams where team_name_key = teamb) as teamb, match_date, venue  from matches", function(errMatches, rowsMatches){
     if(!errMatches)
     {
       connection.query("select * from grounds", function(errGrounds, rowsGrounds){
@@ -67,17 +68,19 @@ app.get("/", function(req, res){
     else {
       console.log(errMatches);
     }
-  });
+  });*/
+	res.render("iplHome");
 });
 
 app.post("/", function(req, res){
-  connection.query("select team_name_key, likes from teams", function(err, likesRows){
+  /*connection.query("select team_name_key, likes from teams", function(err, likesRows){
     var likesRows = JSON.stringify(likesRows);
-    res.send(likesRows)
+    res.send(likesRows)*/
+	res.send('{"srh":"10"}');
   });
 });
 
-app.post("/likeTeam", urlencodedParser, function(req, res){
+/*app.post("/likeTeam", urlencodedParser, function(req, res){
   if(req.session.selectedTeam)
   {
     res.send("Already Selected");
@@ -102,7 +105,7 @@ app.post("/likeTeam", urlencodedParser, function(req, res){
       });
     });
   }
-});
+});*/
 
 
 app.listen(3000);
